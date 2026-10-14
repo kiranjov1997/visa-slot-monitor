@@ -53,8 +53,8 @@ jobs:
         run: pip install -r requirements.txt
 
       # ── 6. Install Playwright (browser only if not cached) ──────────────────
-      - name: Install Playwright browser (first time only)
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
+      - name: Install Playwright browser
+
         run: playwright install chromium
 
       # Always install OS-level system dependencies (fast, ~5 sec)
